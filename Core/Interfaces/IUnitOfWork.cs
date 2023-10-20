@@ -7,30 +7,30 @@ namespace Core.Interfaces
 {
     public interface IUnitOfWork
     {
-        ICargoRepository Cargos { get; set; }
-        IClienteRepository Clientes { get; set; }
-        IColorRepository Colores { get; set; }
-        IDepartamentoRepository Departamentos { get; set; }
-        IDetalleOrdenRepository DetalleOrdenes { get; set; }
-        IDetalleVentaRepository DetalleVentas { get; set; }
-        IEmpleadoRepository Empleados { get; set; }
-        IEmpresaRepository Empresas { get; set; }
-        IEstadoRepository Estados { get; set; }
-        IFormaPagoRepository FormaPagos { get; set; }
-        IGeneroRepository Generos { get; set; }
-        IInsumoPrendaRepository InsumoPrendaS { get; set; }
-        IInsumoProveedorRepository InsumoProveedores { get; set; }
-        IInsumoRepository Insumos { get; set; }
-        IInventarioRepository Inventarios { get; set; }
-        IInventarioTallaRepository InventarioTallas { get; set; }
-        IMunicipioRepository Municipios { get; set; }
-        IOrdenRepository Ordenes { get; set; }
-        IPaisRepository Paises { get; set; }
-        IPrendaRepository Prendas { get; set; }
-        ITallaRepository Tallas { get; set; }
-        ITipoEstadoRepository TipoEstados { get; set; }
-        ITipoPersonaRepository TipoPersonas { get; set; }
-        ITipoProteccionRepository TipoProtecciones { get; set; }
+        ICargoRepository Cargos { get; }
+        IClienteRepository Clientes { get; }
+        IColorRepository Colores { get; }
+        IDepartamentoRepository Departamentos { get; }
+        IDetalleOrdenRepository DetalleOrdenes { get; }
+        IDetalleVentaRepository DetalleVentas { get; }
+        IEmpleadoRepository Empleados { get; }
+        IEmpresaRepository Empresas { get; }
+        IEstadoRepository Estados { get; }
+        IFormaPagoRepository FormaPagos { get; }
+        IGeneroRepository Generos { get; }
+        IInsumoPrendaRepository InsumoPrendaS { get; }
+        IInsumoProveedorRepository InsumoProveedores { get; }
+        IInsumoRepository Insumos { get; }
+        IInventarioRepository Inventarios { get; }
+        IInventarioTallaRepository InventarioTallas { get; }
+        IMunicipioRepository Municipios { get; }
+        IOrdenRepository Ordenes { get; }
+        IPaisRepository Paises { get; }
+        IPrendaRepository Prendas { get; }
+        ITallaRepository Tallas { get; }
+        ITipoEstadoRepository TipoEstados { get; }
+        ITipoPersonaRepository TipoPersonas { get; }
+        ITipoProteccionRepository TipoProtecciones { get; }
         Task<int> SaveAsync();
     }
 }
