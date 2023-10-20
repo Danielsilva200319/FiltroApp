@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Dtos
 {
-    public class DetalleVenta
+    public class DetalleVentaDto
     {
         public int IdVenta { get; set; }
         public int IdProducto { get; set; }
