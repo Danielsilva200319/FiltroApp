@@ -1,3 +1,7 @@
+using Infrastructura.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +12,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+builder.Services.AddDbContext<daniels_ropaContext>(optionsBuilder =>
+{
+    string connectionString = builder.Configuration.GetConnectionString("MySqlConex");
+    optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
