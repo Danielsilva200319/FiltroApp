@@ -13,6 +13,7 @@ namespace Core.Entities
         public string Nombre { get; set; }
         public int IdTipoPersona { get; set; }
         public TipoPersona TipoPersonas { get; set; }
+        public DateOnly FechaRegistro { get; set; }
         public int IdMunicipio { get; set; }
         public Municipio Municipios { get; set; }
         public ICollection<Venta> Ventas { get; set; }
