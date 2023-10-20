@@ -12,7 +12,7 @@ namespace Core.Entities
         public Empleado Empleados { get; set; }
         public int IdCliente { get; set; }
         public Cliente Clientes { get; set; }
-        public int FormaPago { get; set; }
+        public int IdFormaPago { get; set; }
         public FormaPago FormaPagos { get; set; }
         public ICollection<DetalleVenta> DetalleVentas { get; set; }
     }

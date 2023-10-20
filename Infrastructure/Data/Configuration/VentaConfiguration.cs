@@ -17,7 +17,20 @@ namespace Infrastructure.Data.Configuration
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
 
-            
+            builder.Property(p => p.Fecha)
+            .HasColumnType("date");
+
+            builder.HasOne(p => p.Empleados)
+            .WithMany(p => p.Ventas)
+            .HasForeignKey(p => p.IdEmpleado);
+
+            builder.HasOne(p => p.Clientes)
+            .WithMany(p => p.Ventas)
+            .HasForeignKey(p => p.IdCliente);
+
+            builder.HasOne(p => p.FormaPagos)
+            .WithMany(p => p.Ventas)
+            .HasForeignKey(p => p.IdFormaPago);
         }
     }
 }
